@@ -1,0 +1,15 @@
+group 'com.xelita.utils'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    provided 'com.fasterxml.jackson.core:jackson-annotations:2.6.4'
+    provided 'org.projectlombok:lombok:1.16.6'
+}
