@@ -1,6 +1,7 @@
 group 'com.xelita.utils'
 version '1.0-SNAPSHOT'
 
+apply plugin: 'maven'
 apply plugin: 'java'
 
 sourceCompatibility = 1.8
