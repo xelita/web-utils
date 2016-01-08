@@ -10,6 +10,7 @@ import java.io.Serializable;
  *
  * @author xelita
  */
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
