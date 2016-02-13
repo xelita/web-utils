@@ -10,13 +10,13 @@ import java.io.Serializable;
  *
  * @author xelita
  */
+@ToString
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
-public class ContextDTO implements Serializable {
+public class ContextDTO extends AbstractDTO {
 
     private static final long serialVersionUID = 5798904584155568644L;
 

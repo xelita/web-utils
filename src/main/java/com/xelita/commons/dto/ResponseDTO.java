@@ -1,7 +1,8 @@
 package com.xelita.commons.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
@@ -10,11 +11,8 @@ import java.io.Serializable;
  *
  * @author xelita
  */
-@Builder
-@AllArgsConstructor
-@Getter
-@Setter
 @ToString
+@Getter
 public class ResponseDTO<T> implements Serializable {
 
     private static final long serialVersionUID = 5798904584155568644L;
@@ -38,15 +36,14 @@ public class ResponseDTO<T> implements Serializable {
         this.success = true;
     }
 
-    public ResponseDTO(String appName, T data) {
+    public ResponseDTO(T data, String appName) {
         this();
         this.context = new ContextDTO(appName);
         this.data = data;
     }
 
-    public ResponseDTO(String appName, T data, boolean success) {
-        this(appName, data);
+    public ResponseDTO(T data, boolean success, String appName) {
+        this(data, appName);
         this.success = success;
-        this.data = data;
     }
 }
