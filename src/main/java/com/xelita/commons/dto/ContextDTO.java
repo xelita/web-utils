@@ -2,8 +2,7 @@ package com.xelita.commons.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-
-import java.io.Serializable;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * ContextDTO
@@ -22,4 +21,10 @@ public class ContextDTO extends AbstractDTO {
 
     @JsonProperty("application_name")
     private String appName;
+
+    @NotNull
+    @Override
+    public String getId() {
+        return this.appName;
+    }
 }

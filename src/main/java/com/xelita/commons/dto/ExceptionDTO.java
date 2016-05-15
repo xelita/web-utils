@@ -2,6 +2,7 @@ package com.xelita.commons.dto;
 
 import lombok.Getter;
 import lombok.ToString;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * ExceptionDTO.
@@ -31,5 +32,11 @@ public class ExceptionDTO extends AbstractDTO {
         this.type = exception.getClass().getName();
         this.code = code;
         this.message = exception.getMessage();
+    }
+
+    @NotNull
+    @Override
+    public String getId() {
+        return this.uid;
     }
 }
