@@ -1,5 +1,6 @@
 package com.xelita.commons.dto;
 
+import com.xelita.commons.Identifiable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,7 +17,12 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public abstract class AbstractDTO implements Serializable {
+public abstract class AbstractDTO implements Serializable, Identifiable {
 
     private static final long serialVersionUID = -6214385640883845689L;
+
+    @Override
+    public String getType() {
+        return this.getClass().getSimpleName();
+    }
 }
