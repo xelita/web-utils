@@ -5,19 +5,19 @@ package com.xelita.commons;
  *
  * @author xelita
  */
-public interface Identifiable {
+interface Identifiable {
 
     /**
      * Return the object identifier.
      *
      * @return String
      */
-    String getId();
+    fun getId(): String;
 
     /**
      * Return the type of the object.
      *
      * @return String
      */
-    String getType();
+    fun getType(): String;
 }
