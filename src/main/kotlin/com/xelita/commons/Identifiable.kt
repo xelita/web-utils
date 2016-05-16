@@ -1,5 +1,7 @@
 package com.xelita.commons;
 
+import com.fasterxml.jackson.annotation.JsonIgnore
+
 /**
  * Define an identifiable object.
  *
@@ -12,6 +14,7 @@ interface Identifiable {
      *
      * @return String
      */
+    @JsonIgnore
     fun getId(): String;
 
     /**
@@ -19,5 +22,6 @@ interface Identifiable {
      *
      * @return String
      */
+    @JsonIgnore
     fun getType(): String;
 }
